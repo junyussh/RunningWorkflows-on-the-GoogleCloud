@@ -9,11 +9,11 @@ cur_seq = []
 linear = []
 for line in contigfile:
     if line.startswith(">") and cur_contig == '':
-	linear = line.split(" ")
+        linear = line.split(" ")
         cur_contig = linear[0][1:].strip()
     elif line.startswith(">") and cur_contig != '':
         dic[cur_contig] = ''.join(cur_seq)
-	linear = line.split(" ")
+        linear = line.split(" ")
         cur_contig = linear[0][1:].strip()
         cur_seq = []
     else:
@@ -29,4 +29,4 @@ count = 0
 for lin in listofuniqueidentifiers:
     if lin.rstrip() in dic:
         count = len(dic[lin.rstrip()]) + count
-print count
+print(count)

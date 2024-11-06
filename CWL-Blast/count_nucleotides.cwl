@@ -1,7 +1,7 @@
 #this script will call a python program to count nucleotide base 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: python
+baseCommand: python3
 stdout: NucleoCount.txt
 
 requirements:
